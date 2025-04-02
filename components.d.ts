@@ -17,6 +17,11 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
+    UApp: typeof import('./node_modules/.pnpm/@nuxt+ui@3.0.2_@babel+parser@7.27.0_axios@1.8.4_embla-carousel@8.5.2_encoding@0.1.13_jo_8d747c2c154b589481745e300f0b979b/node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
+    UForm: typeof import('./node_modules/.pnpm/@nuxt+ui@3.0.2_@babel+parser@7.27.0_axios@1.8.4_embla-carousel@8.5.2_encoding@0.1.13_jo_8d747c2c154b589481745e300f0b979b/node_modules/@nuxt/ui/dist/runtime/components/Form.vue')['default']
+    UFormField: typeof import('./node_modules/.pnpm/@nuxt+ui@3.0.2_@babel+parser@7.27.0_axios@1.8.4_embla-carousel@8.5.2_encoding@0.1.13_jo_8d747c2c154b589481745e300f0b979b/node_modules/@nuxt/ui/dist/runtime/components/FormField.vue')['default']
+    UInput: typeof import('./node_modules/.pnpm/@nuxt+ui@3.0.2_@babel+parser@7.27.0_axios@1.8.4_embla-carousel@8.5.2_encoding@0.1.13_jo_8d747c2c154b589481745e300f0b979b/node_modules/@nuxt/ui/dist/runtime/components/Input.vue')['default']
+    ULinkBase: typeof import('./node_modules/.pnpm/@nuxt+ui@3.0.2_@babel+parser@7.27.0_axios@1.8.4_embla-carousel@8.5.2_encoding@0.1.13_jo_8d747c2c154b589481745e300f0b979b/node_modules/@nuxt/ui/dist/runtime/components/LinkBase.vue')['default']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
 }
