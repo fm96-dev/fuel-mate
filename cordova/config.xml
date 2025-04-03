@@ -2,10 +2,10 @@
 <widget id="com.fuelmate.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>FuelMate</name>
     <description>Sample Apache Cordova App</description>
-    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
-        Apache Cordova Team
-    </author>
+    <author email="federico.mameli@yahoo.com"> Federico Mameli </author>
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+
+    <hook type="before_build" src="scripts/build.sh"/>
 </widget>
