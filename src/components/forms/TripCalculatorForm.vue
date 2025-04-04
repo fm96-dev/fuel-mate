@@ -149,6 +149,8 @@ function onSubmit(event: FormSubmitEvent<TripCalculatorFormData>) {
       </UFormField>
     </div>
 
-    <UButton type="submit" class="mt-2" :loading block label="Calculate Trip Cost" />
+    <div class="flex justify-center mt-2">
+      <UButton type="submit" class="max-w-md" :loading block label="Calculate Trip Cost" />
+    </div>
   </UForm>
 </template>
