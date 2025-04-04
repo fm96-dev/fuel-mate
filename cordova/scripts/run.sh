@@ -2,6 +2,6 @@
 
 cd ..
 
-pnpm build-only
+pnpm build-only --mode=development
 
 cd ./cordova

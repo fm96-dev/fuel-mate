@@ -7,5 +7,6 @@
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
 
+    <hook type="before_run" src="scripts/run.sh"/>
     <hook type="before_build" src="scripts/build.sh"/>
 </widget>
