@@ -1,61 +1,45 @@
-# app
+# FuelMate
 
-This template should help get you started developing with Vue 3 in Vite.
+Vue 3 and Cordova Application.
 
-## Recommended IDE Setup
+## Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+This project uses vscode devcontainer for development, the custom image includes pnpm, node, typescript, java and android sdk.
 
-## Type Support for `.vue` Imports in TS
+## Scripts
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### Install dependencies
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+```
 pnpm install
 ```
 
-### Compile and Hot-Reload for Development
+This command will install vue 3 app and cordova dependencies.
 
-```sh
-pnpm dev
+### Vite Dev Server
+
+```
+pnpm dev --host
 ```
 
-### Type-Check, Compile and Minify for Production
+This command will run the vite development server
 
-```sh
-pnpm build
+### Cordova Run
+
+```
+pnpm cordova:run browser
+
+or
+
+pnpm cordova:run android
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+Build the vue 3 application in development mode and runs the specified platform
 
-```sh
-pnpm test:unit
+### Cordova Build
+
+```
+pnpm cordova:build
 ```
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-pnpm test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-pnpm build
-pnpm test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+Builds the vue 3 application and builds cordova platforms (browser and android)
