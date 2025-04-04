@@ -3,13 +3,19 @@
   "displayName": "FuelMate",
   "devDependencies": {
     "cordova": "^12.0.0",
+    "cordova-browser": "^7.0.0",
     "cordova-android": "^14.0.0",
-    "cordova-browser": "^7.0.0"
+    "cordova-plugin-geolocation": "^5.0.0"
   },
   "cordova": {
     "platforms": [
-      "browser",
-      "android"
-    ]
+      "android",
+      "browser"
+    ],
+    "plugins": {
+      "cordova-plugin-geolocation": {
+        "GPS_REQUIRED": "true"
+      }
+    }
   }
 }
