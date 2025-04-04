@@ -1,6 +1,9 @@
 {
   "name": "com.fuelmate.app",
   "displayName": "FuelMate",
+  "scripts": {
+    "prepare": "chmod +x -R ./scripts "
+  },
   "devDependencies": {
     "cordova": "^12.0.0",
     "cordova-browser": "^7.0.0",
