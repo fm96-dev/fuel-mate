@@ -6,6 +6,7 @@ import router from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import ui from '@nuxt/ui/vite'
+import uiConfig from './ui.config'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -16,6 +17,7 @@ export default defineConfig({
     }),
     vue(),
     ui({
+      ui: uiConfig,
       autoImport: {
         imports: ['vue', VueRouterAutoImports],
         dts: true,
