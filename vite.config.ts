@@ -19,7 +19,7 @@ export default defineConfig({
     ui({
       ui: uiConfig,
       autoImport: {
-        imports: ['vue', VueRouterAutoImports],
+        imports: ['vue', VueRouterAutoImports, '@vueuse/core'],
         dts: true,
         eslintrc: { enabled: true },
       },
