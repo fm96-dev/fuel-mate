@@ -73,6 +73,7 @@ describe('getDistanceMatrix', () => {
   it('should throw a generic error when no error message is provided', async () => {
     const mockResponse: DistanceMatrixResponseData = {
       status: 'UNKNOWN_ERROR',
+      error_message: '',
     }
     clientMock.mockResolvedValue(mockResponse)
 
