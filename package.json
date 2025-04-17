@@ -29,6 +29,7 @@
     "zod": "^3.24.3"
   },
   "devDependencies": {
+    "@faker-js/faker": "^9.7.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/user-event": "^14.6.1",
     "@testing-library/vue": "^8.1.0",
