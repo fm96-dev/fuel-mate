@@ -19,7 +19,7 @@
     "cordova:build": "cd ./cordova && cordova build"
   },
   "dependencies": {
-    "@nuxt/ui": "^3.0.2",
+    "@nuxt/ui": "https://pkg.pr.new/@nuxt/ui@bdf6b70",
     "@vueuse/core": "^13.1.0",
     "date-fns": "^4.1.0",
     "opencage-api-client": "^1.1.0",
