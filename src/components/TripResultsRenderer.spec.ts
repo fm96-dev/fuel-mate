@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/vue'
-import { describe, it, expect } from 'vitest'
 import TripResultsRenderer from './TripResultsRenderer.vue'
 
 describe('TripResultsRenderer', () => {
