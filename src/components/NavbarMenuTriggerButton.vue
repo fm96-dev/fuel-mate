@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { ButtonProps } from '@nuxt/ui'
 
-const props = defineProps<ButtonProps>()
+const props = defineProps</* @vue-ignore */ ButtonProps>()
 
 const show = defineModel<boolean>('show', {
   default: false,
