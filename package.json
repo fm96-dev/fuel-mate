@@ -8,15 +8,12 @@
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
-    "prepare": "cypress install",
     "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
     "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/",
-    "cordova:run": "cd ./cordova && cordova run",
-    "cordova:build": "cd ./cordova && cordova build"
+    "format": "prettier --write src/"
   },
   "dependencies": {
     "@nuxt/ui": "https://pkg.pr.new/@nuxt/ui@bdf6b70",

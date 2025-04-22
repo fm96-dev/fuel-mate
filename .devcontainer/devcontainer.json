@@ -3,11 +3,7 @@
 {
   "name": "Cordova App",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  // "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
-  "build": {
-    "context": "..",
-    "dockerfile": "./Dockerfile"
-  },
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
   "features": {
     "ghcr.io/devcontainers-extra/features/pnpm": {
       "version": "latest"
