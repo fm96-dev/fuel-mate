@@ -14,9 +14,7 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/",
-    "cordova:run": "cd ./cordova && cordova run",
-    "cordova:build": "cd ./cordova && cordova build"
+    "format": "prettier --write src/"
   },
   "dependencies": {
     "@nuxt/ui": "^3.0.2",
