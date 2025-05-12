@@ -4,7 +4,7 @@ import type { TripCalculatorFormData } from '@/validations/tripCalculatorFormVal
 import { FUEL_TYPES } from '@/clients/open-carburanti/constants'
 import schema from '@/validations/tripCalculatorFormValidation'
 import { useAsyncFn } from '@/composables/useAsyncFn'
-import { getCurrentPosition } from '@/utils/geolocation'
+import { Geolocation, type Position } from '@capacitor/geolocation'
 import { getAddressFromCoords, getCoordsFromAddress } from '@/services/geocoding'
 import { getAverageFuelPrice } from '@/services/fuel'
 
@@ -21,7 +21,7 @@ const emit = defineEmits<Emits>()
 
 const fuelTypeOptions: SelectItem[] = FUEL_TYPES.map((value) => ({ label: value, value }))
 
-const userCurrentPositionCoords = shallowRef<GeolocationCoordinates>()
+const userCurrentPositionCoords = shallowRef<Position['coords']>()
 const isStartLocationSetByUserPosition = ref(false)
 
 const state = reactive<TripCalculatorFormData>({
@@ -34,7 +34,7 @@ const state = reactive<TripCalculatorFormData>({
 
 const { loading: loadingUserPosition, run: loadUserPosition } = useAsyncFn(async function () {
   try {
-    const { coords } = await getCurrentPosition({ enableHighAccuracy: true })
+    const { coords } = await Geolocation.getCurrentPosition({ enableHighAccuracy: true })
     userCurrentPositionCoords.value = coords
   } catch (error) {
     console.error(error)
@@ -42,7 +42,7 @@ const { loading: loadingUserPosition, run: loadUserPosition } = useAsyncFn(async
   }
 })
 
-async function setStartLocationFromCoords(coords: GeolocationCoordinates) {
+async function setStartLocationFromCoords(coords: Position['coords']) {
   try {
     const { formatted } = await getAddressFromCoords(coords)
     state.startLocation = formatted
@@ -62,7 +62,7 @@ watch(userCurrentPositionCoords, async (coords) => {
 
 const { loading: loadingAverageFuelPrice, run: loadAverageFuelPrice } = useAsyncFn(
   async function () {
-    let coords: GeolocationCoordinates
+    let coords: Position['coords']
     if (isStartLocationSetByUserPosition.value && userCurrentPositionCoords.value) {
       coords = userCurrentPositionCoords.value
     } else {
@@ -70,7 +70,7 @@ const { loading: loadingAverageFuelPrice, run: loadAverageFuelPrice } = useAsync
       coords = {
         latitude: result.geometry.lat,
         longitude: result.geometry.lng,
-      } as unknown as GeolocationCoordinates
+      } as unknown as Position['coords']
     }
 
     state.fuelPrice = await getAverageFuelPrice(state.fuelType, coords)
