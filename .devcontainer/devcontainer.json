@@ -1,19 +1,17 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
-  "name": "Cordova App",
+  "name": "Fuel Mate",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  // "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
-  "build": {
-    "context": "..",
-    "dockerfile": "./Dockerfile"
-  },
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
   "features": {
     "ghcr.io/devcontainers-extra/features/pnpm": {
       "version": "latest"
     }
   },
-  "mounts": ["source=pnpm-store,target=/home/node/.pnpm-store,type=volume"],
+  "mounts": [
+    "source=pnpm-store,target=/home/node/.pnpm-store,type=volume"
+  ],
   "initializeCommand": "./.devcontainer/commands/initialize.sh",
   "postCreateCommand": "./.devcontainer/commands/post-create.sh",
   "customizations": {
@@ -32,7 +30,8 @@
         "pflannery.vscode-versionlens",
         "vivaxy.vscode-conventional-commits",
         "YoavBls.pretty-ts-errors",
-        "toba.vsfire"
+        "toba.vsfire",
+        "EditorConfig.EditorConfig"
       ]
     }
   }
