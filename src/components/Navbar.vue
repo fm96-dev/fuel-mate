@@ -42,7 +42,7 @@ router.beforeEach(() => {
 
 <template>
   <div class="relative bg-(--ui-bg)">
-    <UContainer class="flex justify-between items-center">
+    <UContainer class="flex justify-between items-center max-sm:py-2">
       <RouterLink to="/" class="block text-2xl py-2 md:py-4 md:text-3xl"> FuelMate </RouterLink>
 
       <NavbarMenuTriggerButton
