@@ -8,6 +8,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import ssl from '@vitejs/plugin-basic-ssl'
 import ui from '@nuxt/ui/vite'
 import uiConfig from './ui.config'
+import { VueUseComponentsResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -27,6 +28,9 @@ export default defineConfig({
         imports: ['vue', VueRouterAutoImports, '@vueuse/core'],
         dts: true,
         eslintrc: { enabled: true },
+      },
+      components: {
+        resolvers: [VueUseComponentsResolver()],
       },
     }),
     vueDevTools(),
