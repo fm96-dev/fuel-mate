@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { FormSubmitEvent, SelectItem } from '@nuxt/ui'
 import type { TripCalculatorFormData } from '@/validations/tripCalculatorFormValidation'
-import { FUEL_TYPES } from '@/clients/open-carburanti/constants'
+import { FUEL_TYPES } from '@open-fuel/client'
 import schema from '@/validations/tripCalculatorFormValidation'
 import { useAsyncFn } from '@/composables/useAsyncFn'
 import { Geolocation, type Position } from '@capacitor/geolocation'

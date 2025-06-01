@@ -1,6 +1,6 @@
-import type { FuelType } from '@/clients/open-carburanti'
+import type { FuelType } from '@open-fuel/client'
 import type { Position } from '@capacitor/geolocation'
-import { getGasStationByDistance } from '@/clients/open-carburanti'
+import { getGasStationByDistance } from '@open-fuel/client'
 
 export async function getAverageFuelPrice(fuelType: FuelType, coords: Position['coords']) {
   const gasStations = await getGasStationByDistance({

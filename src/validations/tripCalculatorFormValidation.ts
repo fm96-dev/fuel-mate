@@ -1,5 +1,5 @@
 import type { output } from 'zod'
-import { FUEL_TYPES } from '@/clients/open-carburanti/constants'
+import { FUEL_TYPES } from '@open-fuel/client'
 import { enum as $enum, number, object, string } from 'zod'
 
 const schema = object({
