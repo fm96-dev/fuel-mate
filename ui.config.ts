@@ -1,6 +1,10 @@
 import { NuxtUIOptions } from '@nuxt/ui/unplugin'
 
 const config: NuxtUIOptions['ui'] = {
+  colors: {
+    primary: 'teal',
+    neutral: 'slate',
+  },
   formField: {
     slots: {
       root: 'mb-3',
